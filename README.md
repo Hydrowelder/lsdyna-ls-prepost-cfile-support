@@ -13,8 +13,20 @@ It makes editing LS-PrePost command files easier and more readable by adding hig
 * Syntax and semantic highlighting for LS-PrePost commands, arguments, strings, and comments
 * Command snippets and autocomplete for [documented LS-PrePost commands](https://ansyshelp.ansys.com/public/account/secured?returnurl=/Views/Secured/corp/v251/en/lsdyna_prepost/lspp_ug_cmd_index_basic_cmd.html)
 
-### Before and After
-\!\[semantic highlighting before\]\(images/before.png\) \!\[semantic highlighting after\]\(images/after.png\)
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+        <img src="images/before.png" alt="Before highlighting" height="400">
+    </td>
+    <td>
+        <img src="images/after.png" alt="After highlighting" height="400">
+    </td>
+  </tr>
+</table>
 
 ## Known Issues/Limitations
 * This extension currently focuses on core LS-PrePost commands.
