@@ -47,6 +47,6 @@ Not all commands or argument combinations may be supported yet.
 * Initial release of the extension
 * Added semantic highlighting
 
-## Disclaimer:
+## Disclaimer
 This extension is not affiliated with or endorsed by Ansys.
 It is an unofficial project provided as-is.
