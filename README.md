@@ -42,11 +42,11 @@ Not all commands or argument combinations may be supported yet.
 * No command validation
 
 ## Release Notes
-### 0.2.0
+### 1.0.0
 * Added file icon
 * Added snippets
 
-### 0.1.0
+### 0.0.1
 * Initial release of the extension
 * Added semantic highlighting
 
