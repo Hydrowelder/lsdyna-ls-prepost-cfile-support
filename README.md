@@ -31,6 +31,10 @@ It makes editing LS-PrePost command files easier and more readable by adding hig
   </tr>
 </table>
 
+## Install
+Install from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=DavidGable.lsdyna-ls-prepost-cfile-support)
+or search for **LS-DYNA LS-PrePost CFile Support** in the Extensions view.
+
 ## Known Issues/Limitations
 * This extension currently focuses on core LS-PrePost commands.
 Not all commands or argument combinations may be supported yet.
