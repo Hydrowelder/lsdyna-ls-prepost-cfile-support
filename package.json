@@ -10,16 +10,25 @@
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [{
-      "id": "lsppcfile",
-      "aliases": ["LS-PrePost CFile", "lsppcfile"],
-      "extensions": [".cfile"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "lsppcfile",
-      "scopeName": "source.lsprepost-cfile",
-      "path": "./syntaxes/lsppcfile.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "lsppcfile",
+        "aliases": [
+          "LS-PrePost CFile",
+          "lsppcfile"
+        ],
+        "extensions": [
+          ".cfile"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "lsppcfile",
+        "scopeName": "source.lsprepost-cfile",
+        "path": "./syntaxes/lsppcfile.tmLanguage.json"
+      }
+    ]
   }
 }

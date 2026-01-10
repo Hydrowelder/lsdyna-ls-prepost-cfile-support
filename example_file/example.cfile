@@ -1,0 +1,59 @@
+c ============================================================
+c Example LS-PrePost cfile
+c Uses only commands documented by ANSYS
+c ============================================================
+
+c Load a d3plot file
+open d3plot "run001/d3plot"
+
+c Reset view and fit model to screen
+home
+ac
+
+c Set background to white
+background 1 1 1
+
+c Display all parts and turn mesh on
+pall
+mesh
+
+c Change mesh appearance
+meshcolor 0.6 0.6 0.6
+meshlwidth 2
+
+c Switch to shaded display
+shad
+shademode 1
+
+c Turn on legend and triad
+showlegend 1
+showtriad 1
+
+c Set view orientation
+front
+rotang 15
+ry
+rx
+
+c Animate forward through states
+anim first 1
+anim last 10
+anim incr 1
+anim forward
+anim stop
+
+c Step forward two states manually
+state +2
+
+c Zoom into center of screen
+zin 0.25 0.25 0.75 0.75
+
+c Restore full model view
+zout
+restore
+
+c Save image using system command
+system "echo Saving image"
+
+c Exit LS-PrePost
+exit
