@@ -1,4 +1,4 @@
-# lsdyna-ls-prepost-cfile-support README
+# LSDYNA LS-PrePost CFile Support
 ![VS Code Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/DavidGable.lsdyna-ls-prepost-cfile-support)
 ![VS Code Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/DavidGable.lsdyna-ls-prepost-cfile-support)
 ![VS Code Marketplace Rating](https://img.shields.io/visual-studio-marketplace/r/DavidGable.lsdyna-ls-prepost-cfile-support)
