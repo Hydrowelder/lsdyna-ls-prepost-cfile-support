@@ -1,51 +1,36 @@
 # lsdyna-ls-prepost-cfile-support README
+![Version](https://vsmarketplacebadge.apphb.com/version/DavidGable.lsdyna-ls-prepost-cfile-support.svg)
+![Installs](https://vsmarketplacebadge.apphb.com/installs/DavidGable.lsdyna-ls-prepost-cfile-support.svg)
+![Rating](https://vsmarketplacebadge.apphb.com/rating/DavidGable.lsdyna-ls-prepost-cfile-support.svg)
+![License](https://img.shields.io/github/license/Hydrowelder/lsdyna-ls-prepost-cfile-support)
 
-This is a project which aims to build a [semantic highlighter](https://code.visualstudio.com/api/language-extensions/semantic-highlight-guide) for use with cfile in LS PrePost in Visual Studio Code.
+This extension provides language support for LS-DYNA LS-PrePost command files (`.cfile`) in Visual Studio Code.
+
+It makes editing LS-PrePost command files easier and more readable by adding highlighting and command assistance.
 
 ## Features
+* Adds a file icon for the `.cfile` extension for easy identification
+* Syntax and semantic highlighting for LS-PrePost commands, arguments, strings, and comments
+* Command snippets and autocomplete for [documented LS-PrePost commands](https://ansyshelp.ansys.com/public/account/secured?returnurl=/Views/Secured/corp/v251/en/lsdyna_prepost/lspp_ug_cmd_index_basic_cmd.html)
 
-I tried to make it do syntax highlighting according to the [LS-PrePost documentation](https://ansyshelp.ansys.com/public/account/secured?returnurl=/Views/Secured/corp/v251/en/lsdyna_prepost/lspp_ug_cmd_index_basic_cmd.html). Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+### Before and After
+\!\[semantic highlighting before\]\(images/before.png\) \!\[semantic highlighting after\]\(images/after.png\)
 
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
+## Known Issues/Limitations
+* This extension currently focuses on core LS-PrePost commands.
+Not all commands or argument combinations may be supported yet.
+* No support for hover documentation
+* No command validation
 
 ## Release Notes
+### 0.2.0
+* Added file icon
+* Added snippets
 
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+### 0.1.0
+* Initial release of the extension
+* Added semantic highlighting
 
 ## Disclaimer:
-I am not part of Ansys. This is not official. I just felt like having fun. Use at your own risk.
+This extension is not affiliated with or endorsed by Ansys.
+It is an unofficial project provided as-is.
