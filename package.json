@@ -1,0 +1,25 @@
+{
+  "name": "lsdyna-ls-prepost-cfile-support",
+  "displayName": "LSDYNA LS-PrePost CFile Support",
+  "description": "This is an unofficial language support for the cfile format used in LSDYNA LS-PrePost. It adds semantic highlighting.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.108.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "lsppcfile",
+      "aliases": ["LS-PrePost CFile", "lsppcfile"],
+      "extensions": [".cfile"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "lsppcfile",
+      "scopeName": "source.lsprepost-cfile",
+      "path": "./syntaxes/lsppcfile.tmLanguage.json"
+    }]
+  }
+}

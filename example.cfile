@@ -1,0 +1,7 @@
+open d3plot "d3plot"
+group clear
+pick entity part 1
+xyplot create history
+xyplot curve write "LsoptHistory"
+
+c other commands
