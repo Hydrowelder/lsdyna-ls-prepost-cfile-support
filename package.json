@@ -2,7 +2,7 @@
     "name": "lsdyna-ls-prepost-cfile-support",
     "displayName": "LSDYNA LS-PrePost CFile Support",
     "publisher": "DavidGable",
-    "description": "This is an unofficial language support for the cfile format used in LSDYNA LS-PrePost. It adds semantic highlighting.",
+    "description": "This is an unofficial language support for the cfile format used in LSDYNA LS-PrePost.",
     "version": "1.0.2",
     "engines": {
         "vscode": "^1.108.0"
@@ -47,5 +47,23 @@
         "type": "git",
         "url": "https://github.com/Hydrowelder/lsdyna-ls-prepost-cfile-support.git"
     },
+    "keywords": [
+        "snippets",
+        "snippet",
+        "language-support",
+        "lsdyna",
+        "semantic-highlighting",
+        "semantic-highlighter",
+        "LS-PrePost",
+        "lspp",
+        "cfile",
+        "finite-element",
+        "FEA",
+        "simulation",
+        "postprocessing",
+        "visualization",
+        "engineering",
+        "modeling"
+    ],
     "icon": "icons/lsppcfile-light-dark.png"
 }
