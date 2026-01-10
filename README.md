@@ -4,7 +4,7 @@ This is a project which aims to build a [semantic highlighter](https://code.visu
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+I tried to make it do syntax highlighting according to the [LS-PrePost documentation](https://ansyshelp.ansys.com/public/account/secured?returnurl=/Views/Secured/corp/v251/en/lsdyna_prepost/lspp_ug_cmd_index_basic_cmd.html). Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
 
 For example if there is an image subfolder under your extension project workspace:
 

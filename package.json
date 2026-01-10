@@ -1,39 +1,50 @@
 {
-  "name": "lsdyna-ls-prepost-cfile-support",
-  "displayName": "LSDYNA LS-PrePost CFile Support",
-  "publisher": "DavidGable",
-  "description": "This is an unofficial language support for the cfile format used in LSDYNA LS-PrePost. It adds semantic highlighting.",
-  "version": "0.0.1",
-  "engines": {
-    "vscode": "^1.108.0"
-  },
-  "categories": [
-    "Programming Languages"
-  ],
-  "contributes": {
-    "languages": [
-      {
-        "id": "lsppcfile",
-        "aliases": [
-          "LS-PrePost CFile",
-          "lsppcfile"
-        ],
-        "extensions": [
-          ".cfile"
-        ],
-        "configuration": "./language-configuration.json"
-      }
+    "name": "lsdyna-ls-prepost-cfile-support",
+    "displayName": "LSDYNA LS-PrePost CFile Support",
+    "publisher": "DavidGable",
+    "description": "This is an unofficial language support for the cfile format used in LSDYNA LS-PrePost. It adds semantic highlighting.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.108.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Snippets"
     ],
-    "grammars": [
-      {
-        "language": "lsppcfile",
-        "scopeName": "source.lsprepost-cfile",
-        "path": "./syntaxes/lsppcfile.tmLanguage.json"
-      }
-    ]
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Hydrowelder/lsdyna-ls-prepost-cfile-support.git"
-  }
+    "contributes": {
+        "languages": [
+            {
+                "id": "lsppcfile",
+                "aliases": [
+                    "LS-PrePost CFile",
+                    "lsppcfile"
+                ],
+                "extensions": [
+                    ".cfile"
+                ],
+                "configuration": "./language-configuration.json",
+                "icon": {
+                    "light": "./icons/lsppcfile-light-dark.png",
+                    "dark": "./icons/lsppcfile-light-dark.png"
+                }
+            }
+        ],
+        "grammars": [
+            {
+                "language": "lsppcfile",
+                "scopeName": "source.lsprepost-cfile",
+                "path": "./syntaxes/lsppcfile.tmLanguage.json"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "lsppcfile",
+                "path": "./snippets.json"
+            }
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Hydrowelder/lsdyna-ls-prepost-cfile-support.git"
+    }
 }

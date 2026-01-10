@@ -1,0 +1,92 @@
+{
+    "ac": {
+        "prefix": "ac",
+        "body": "ac",
+        "description": "Center displayed parts and fit to graphics area"
+    },
+    "anim forward": {
+        "prefix": "anim",
+        "body": "anim forward",
+        "description": "Animate forward"
+    },
+    "anim backward": {
+        "prefix": "anim backward",
+        "body": "anim backward",
+        "description": "Animate backwards"
+    },
+    "anim first": {
+        "prefix": "anim first",
+        "body": "anim first ${1:n}",
+        "description": "Set starting animation state to n"
+    },
+    "anim last": {
+        "prefix": "anim last",
+        "body": "anim last ${1:n}",
+        "description": "Set ending animation state to n"
+    },
+    "anim incr": {
+        "prefix": "anim incr",
+        "body": "anim incr ${1:n}",
+        "description": "Set animation increment by n states"
+    },
+    "background RGB": {
+        "prefix": "background",
+        "body": "background ${1:0.0} ${2:0.0} ${3:0.0}",
+        "description": "Change background color (R G B values range from 0.0 to 1.0)"
+    },
+    "background white": {
+        "prefix": "background white",
+        "body": "background 1 1 1",
+        "description": "Change background color to white"
+    },
+    "background black": {
+        "prefix": "background black",
+        "body": "background 0 0 0",
+        "description": "Change background color to black"
+    },
+    "open keyword": {
+        "prefix": "open keyword",
+        "body": "open keyword \"${1:model.k}\"",
+        "description": "Load LS-DYNA keyword file and add it to the current model"
+    },
+    "open d3plot": {
+        "prefix": "open d3plot",
+        "body": "open d3plot \"${1:d3plot}\"",
+        "description": "Load d3plot file"
+    },
+    "m parts list": {
+        "prefix": "m",
+        "body": "m ${1:i,j,k}",
+        "description": "Display parts by explicit part IDs"
+    },
+    "m parts range": {
+        "prefix": "m",
+        "body": "m ${1:i}:${2:j}",
+        "description": "Display parts from PID i to PID j"
+    },
+    "state forward": {
+        "prefix": "state",
+        "body": "state +${1:n}",
+        "description": "Advance display by n states"
+    },
+    "state backward": {
+        "prefix": "state -",
+        "body": "state -${1:n}",
+        "description": "Rewind display by n states"
+    },
+    "system": {
+        "prefix": "system",
+        "body": "system \"${1:command}\"",
+        "description": "Issue a UNIX system command"
+    },
+    "title": {
+        "prefix": "title",
+        "body": "title \"${1:title}\"",
+        "description": "Change displayed title"
+    },
+    "exit": {
+        "prefix": "exit",
+        "body": "exit",
+        "description": "Exit LS-PrePost"
+    }
+}

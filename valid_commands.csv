@@ -1,3 +1,4 @@
+Command	Description
 ac	center displayed parts fit to graphics area
 anim backward	animate backwards
 anim cycle	cycle animation forward and backward
@@ -16,34 +17,34 @@ bottom	display bottom view
 c	comment line marker (like using $ in a keyword input file)
 edge	display model in edge mode
 edgelwidth i	change edge line width (i value ranges from 1-5)
-endfull	restore GUI and graphics (see "full" command)
+endfull	"restore GUI and graphics (see ""full"" command)"
 exit	exit LS-PrePost
 feat	display model in feature mode
-featang d	change feature angle to "d" degrees
+featang d	"change feature angle to ""d"" degrees"
 front	display front view
 full	change graphics area to full screen (Esc to restore)
 grid	display model in grid mode
 hide	display model in hide mode
 home	reset display to default (top) view
-import keyword model.k	import file "model.k" and add it to the current model
-labelcolor R G B	change label color (see "background" command)
+import keyword model.k	"import file ""model.k"" and add it to the current model"
+labelcolor R G B	"change label color (see ""background"" command)"
 left	display left view
 m i,j,k...	display part i,j,k where i,j,k are part IDs
 m i:j	display part IDs from PIDi to PIDj
 mesh	turn mesh on
-meshcolor R G B	change mesh color (see "background" command)
+meshcolor R G B	"change mesh color (see ""background"" command)"
 meshlwidth i	change mesh line width (i value ranges from 1-5)
 open command cfile	load command file named cfile
 open d3plot d3plot	load d3plot file named d3plot
 open d3thdt d3thdt	load d3thdt file named d3thdt
 open keyword model.k	load file model.k
-outline R G B	change outline color (see "background" command)
+outline R G B	"change outline color (see ""background"" command)"
 outlining 1	draw outlines on free edges
 outlining 2	draw outlines on free edges and feature lines
 pall	display all parts
 parallel	change display to parallel projection mode
 perspective	change display to perspective projection mode
-pixtol i	change pick search tolerance to "i" pixels (default=100)
+pixtol i	"change pick search tolerance to ""i"" pixels (default=100)"
 raoff	remove all reflections
 raxy	reflect model about xy-plane
 raxz	reflect model about xz plane
@@ -51,9 +52,9 @@ razy	reflect model about yz-plane
 redraw	redraw model with current settings
 restore	restore display to original position and remove all settings
 right	display right view
-rotang d	set rotation angle increment to "d" degrees
+rotang d	"set rotation angle increment to ""d"" degrees"
 rstpart	restore last part that was turned off
-rx	rotate model about global x axis (see "rotang" command)
+rx	"rotate model about global x axis (see ""rotang"" command)"
 ry	rotate model about global y axis
 rz	rotate model about global z axis
 shad	display modle in shaded mode
@@ -63,12 +64,12 @@ showtriad 0	turn triad off, 1 turns it on
 shrink	toggle shrink mode on/off
 state +n	advance display by n states
 state -n	rewind display by n states
-system "command"	issue a unix system command (ex: system "xterm&")
+"system ""command"""	"issue a unix system command (ex: system ""xterm&"")"
 t	exit LS-PrePost
 texon 0	turn textured fringing off, 1 turns it on
-textcolor R G B	change text color (see "background" command)
+textcolor R G B	"change text color (see ""background"" command)"
 timestamp 0	turn timestamp off, 1 turns it on
-title "xxxxxx"	change title to xxxxxx
+"title ""xxxxxx"""	change title to xxxxxx
 title 0	turn title off, 1 turns it on
 top	display top view
 userfringefontsize i	set graphics area font size(i value ranges from 0-6, 0 restores default)
