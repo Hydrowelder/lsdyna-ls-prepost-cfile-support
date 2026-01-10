@@ -3,7 +3,7 @@
     "displayName": "LSDYNA LS-PrePost CFile Support",
     "publisher": "DavidGable",
     "description": "This is an unofficial language support for the cfile format used in LSDYNA LS-PrePost. It adds semantic highlighting.",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "engines": {
         "vscode": "^1.108.0"
     },
