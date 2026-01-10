@@ -1,6 +1,7 @@
 {
   "name": "lsdyna-ls-prepost-cfile-support",
   "displayName": "LSDYNA LS-PrePost CFile Support",
+  "publisher": "DavidGable",
   "description": "This is an unofficial language support for the cfile format used in LSDYNA LS-PrePost. It adds semantic highlighting.",
   "version": "0.0.1",
   "engines": {
