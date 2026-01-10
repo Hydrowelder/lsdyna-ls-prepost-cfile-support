@@ -3,6 +3,9 @@
 ![VS Code Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/DavidGable.lsdyna-ls-prepost-cfile-support)
 ![VS Code Marketplace Rating](https://img.shields.io/visual-studio-marketplace/r/DavidGable.lsdyna-ls-prepost-cfile-support)
 ![License](https://img.shields.io/github/license/Hydrowelder/lsdyna-ls-prepost-cfile-support)
+[![VS Code Marketplace](https://img.shields.io/badge/VS%20Code-Marketplace-blue)](
+https://marketplace.visualstudio.com/items?itemName=DavidGable.lsdyna-ls-prepost-cfile-support
+)
 
 This extension provides language support for LS-DYNA LS-PrePost command files (`.cfile`) in Visual Studio Code.
 
