@@ -4,20 +4,22 @@ const path = require("path");
 
 function loadCommands(context) {
     // Read TSV shipped in the extension and build a map:
-    // key = normalized command (no args) -> { command, args, signature, desc, tokenCount }
+    // base command -> array of { command, variant, args, signature, desc }
+    // Also store command+variant as keys for exact matches
     const csvPath = path.join(context.extensionPath, "valid_commands.csv");
     let data = "";
     try {
         data = fs.readFileSync(csvPath, "utf8");
     } catch (e) {
         console.error("Could not read valid_commands.csv", e);
-        return new Map();
+        return { byCommand: new Map(), byComposite: new Map() };
     }
     const lines = data.split(/\r?\n/).map((l) => l.trim()).filter(Boolean);
     // accept header starting with "command" (case-insensitive)
     if (lines.length && /^command\s*/i.test(lines[0])) lines.shift(); // drop header
 
-    const map = new Map();
+    const byCommand = new Map(); // command -> array of entries
+    const byComposite = new Map(); // "command variant" -> entry
 
     function normalizeKey(text) {
         let t = String(text).trim();
@@ -30,18 +32,31 @@ function loadCommands(context) {
     }
 
     for (const line of lines) {
-        // split on tab into Command, Args, Description
+        // split on tab into Command, Variant, Args, Description
         const parts = line.split("\t");
         if (!parts[0]) continue;
         const command = parts[0].trim();
-        const args = (parts[1] || "").trim();
-        const desc = (parts.slice(2).join("\t") || "").replace(/""/g, '"').trim();
-        const key = normalizeKey(command); // match only the command (not args)
+        const variant = (parts[1] || "").trim();
+        const args = (parts[2] || "").trim();
+        const desc = (parts.slice(3).join("\t") || "").replace(/""/g, '"').trim();
+
+        const commandKey = normalizeKey(command);
         const signature = args ? `${command} ${args}` : command;
-        const tokenCount = key.split(/\s+/).filter(Boolean).length;
-        map.set(key, { command, args, signature, desc, tokenCount });
+        const entry = { command, variant, args, signature, desc };
+
+        // Store by base command
+        if (!byCommand.has(commandKey)) {
+            byCommand.set(commandKey, []);
+        }
+        byCommand.get(commandKey).push(entry);
+
+        // Also store by composite key for quick exact match
+        if (variant) {
+            const compositeKey = `${commandKey} ${normalizeKey(variant)}`;
+            byComposite.set(compositeKey, entry);
+        }
     }
-    return map;
+    return { byCommand, byComposite };
 }
 
 // Escape text for use in RegExp
@@ -50,6 +65,7 @@ function escapeRegExp(text) {
 }
 
 function findCommandAtPosition(commandMap, document, position) {
+    const { byCommand, byComposite } = commandMap;
     const lineText = document.lineAt(position.line).text;
     const trimmed = lineText.trim();
     if (!trimmed) return null;
@@ -64,15 +80,18 @@ function findCommandAtPosition(commandMap, document, position) {
     const beforeTokens = beforeText.trim().split(/\s+/).filter(Boolean);
     const idx = Math.max(0, beforeTokens.length - 1);
 
-    const maxLen = 5; // allow matching up to 5-token commands
+    // Try to match: start from current token, then look back 1-4 tokens for command + variant
+    const maxLen = 4; // command up to 4 tokens (e.g., "open d3plot" = 2 tokens)
     for (let len = Math.min(maxLen, tokens.length); len >= 1; len--) {
-        const start = idx - (len - 1);
-        if (start < 0) continue;
+        const start = Math.max(0, idx - (len - 1));
+        if (start + len > tokens.length) continue;
+
         const candidateRaw = tokens.slice(start, start + len).join(" ");
         const candidateKey = candidateRaw.replace(/\s+/g, " ").toLowerCase();
-        if (commandMap.has(candidateKey)) {
-            const entry = commandMap.get(candidateKey);
-            // build regex that tolerates variable whitespace between tokens
+
+        // try exact composite match first (command + variant)
+        if (byComposite.has(candidateKey)) {
+            const entry = byComposite.get(candidateKey);
             const candidateRegex = escapeRegExp(candidateRaw).replace(/\s+/g, "\\s+");
             const re = new RegExp("\\b" + candidateRegex + "\\b", "i");
             const match = re.exec(lineText);
@@ -84,12 +103,21 @@ function findCommandAtPosition(commandMap, document, position) {
         }
     }
 
-    // fallback: try single word normalized
-    const wordRange = document.getWordRangeAtPosition(position);
-    if (!wordRange) return null;
-    const word = document.getText(wordRange).toLowerCase();
-    if (commandMap.has(word)) {
-        return { entry: commandMap.get(word), range: wordRange };
+    // fallback: try first token as base command and return first entry
+    if (tokens.length > 0) {
+        const firstToken = tokens[0].toLowerCase();
+        if (byCommand.has(firstToken)) {
+            const entries = byCommand.get(firstToken);
+            // return the first entry (or the one without variant if available)
+            const entry = entries.find(e => !e.variant) || entries[0];
+            const re = new RegExp("\\b" + escapeRegExp(firstToken) + "\\b", "i");
+            const match = re.exec(lineText);
+            let range = document.getWordRangeAtPosition(position) || new vscode.Range(position, position);
+            if (match) {
+                range = new vscode.Range(position.line, match.index, position.line, match.index + match[0].length);
+            }
+            return { entry, range };
+        }
     }
 
     return null;
@@ -118,12 +146,31 @@ function activate(context) {
 
     // Pre-create completion items for all commands with documentation
     const completionItems = [];
-    for (const [key, { signature, desc }] of commandMap.entries()) {
+    const { byCommand, byComposite } = commandMap;
+    const seen = new Set();
+
+    // Add all composite entries (variants)
+    for (const [key, { signature, desc }] of byComposite.entries()) {
+        if (seen.has(signature)) continue;
+        seen.add(signature);
         const item = new vscode.CompletionItem(signature, vscode.CompletionItemKind.Keyword);
         item.detail = signature;
         if (desc) item.documentation = new vscode.MarkdownString(desc);
         item.insertText = signature;
         completionItems.push(item);
+    }
+
+    // Add base command entries (no variant)
+    for (const [cmd, entries] of byCommand.entries()) {
+        for (const { signature, desc } of entries) {
+            if (seen.has(signature)) continue;
+            seen.add(signature);
+            const item = new vscode.CompletionItem(signature, vscode.CompletionItemKind.Keyword);
+            item.detail = signature;
+            if (desc) item.documentation = new vscode.MarkdownString(desc);
+            item.insertText = signature;
+            completionItems.push(item);
+        }
     }
 
     const completionProvider = vscode.languages.registerCompletionItemProvider(
