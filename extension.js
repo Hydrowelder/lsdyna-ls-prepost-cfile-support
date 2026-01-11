@@ -3,8 +3,8 @@ const fs = require("fs");
 const path = require("path");
 
 function loadCommands(context) {
-    // Read CSV shipped in the extension and build a map:
-    // normalizedKey -> { signature: originalCommand, desc, tokenCount }
+    // Read TSV shipped in the extension and build a map:
+    // key = normalized command (no args) -> { command, args, signature, desc, tokenCount }
     const csvPath = path.join(context.extensionPath, "valid_commands.csv");
     let data = "";
     try {
@@ -14,12 +14,12 @@ function loadCommands(context) {
         return new Map();
     }
     const lines = data.split(/\r?\n/).map((l) => l.trim()).filter(Boolean);
+    // accept header starting with "command" (case-insensitive)
     if (lines.length && /^command\s*/i.test(lines[0])) lines.shift(); // drop header
 
     const map = new Map();
 
     function normalizeKey(text) {
-        // remove surrounding quotes, collapse whitespace, lowercase
         let t = String(text).trim();
         t = t.replace(/""/g, '"');
         if ((t.startsWith('"') && t.endsWith('"')) || (t.startsWith("'") && t.endsWith("'"))) {
@@ -30,14 +30,16 @@ function loadCommands(context) {
     }
 
     for (const line of lines) {
-        // split on tab (CSV uses tabs here); join remaining columns as description
+        // split on tab into Command, Args, Description
         const parts = line.split("\t");
         if (!parts[0]) continue;
-        const signature = parts[0].trim();
-        const desc = (parts.slice(1).join("\t") || "").replace(/""/g, '"').trim();
-        const key = normalizeKey(signature);
+        const command = parts[0].trim();
+        const args = (parts[1] || "").trim();
+        const desc = (parts.slice(2).join("\t") || "").replace(/""/g, '"').trim();
+        const key = normalizeKey(command); // match only the command (not args)
+        const signature = args ? `${command} ${args}` : command;
         const tokenCount = key.split(/\s+/).filter(Boolean).length;
-        map.set(key, { signature, desc, tokenCount });
+        map.set(key, { command, args, signature, desc, tokenCount });
     }
     return map;
 }

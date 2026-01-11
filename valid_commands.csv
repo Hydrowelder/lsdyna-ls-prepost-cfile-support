@@ -1,83 +1,83 @@
-Command	Description
-ac	center displayed parts fit to graphics area
-anim backward	animate backwards
-anim cycle	cycle animation forward and backward
-anim first n	set starting state for animation to state n
-anim forward	animate forward
-anim incr n	set animation increment by n states
-anim last n	set ending state for animation to state n
-anim start	start animation
-anim stop	stop animation
-back	display back view
-background R G B	change background color (R,G,B values range from 0.0-1.0)
-background 1 1 1	change background color to white
-background 0 0 0	change background color to black
-beamprism 0	draw beams as lines, 1 to draw beams as prisms
-bottom	display bottom view
-c	comment line marker (like using $ in a keyword input file)
-edge	display model in edge mode
-edgelwidth i	change edge line width (i value ranges from 1-5)
-endfull	"restore GUI and graphics (see ""full"" command)"
-exit	exit LS-PrePost
-feat	display model in feature mode
-featang d	"change feature angle to ""d"" degrees"
-front	display front view
-full	change graphics area to full screen (Esc to restore)
-grid	display model in grid mode
-hide	display model in hide mode
-home	reset display to default (top) view
-import keyword model.k	"import file ""model.k"" and add it to the current model"
-labelcolor R G B	"change label color (see ""background"" command)"
-left	display left view
-m i,j,k...	display part i,j,k where i,j,k are part IDs
-m i:j	display part IDs from PIDi to PIDj
-mesh	turn mesh on
-meshcolor R G B	"change mesh color (see ""background"" command)"
-meshlwidth i	change mesh line width (i value ranges from 1-5)
-open command cfile	load command file named cfile
-open d3plot d3plot	load d3plot file named d3plot
-open d3thdt d3thdt	load d3thdt file named d3thdt
-open keyword model.k	load file model.k
-outline R G B	"change outline color (see ""background"" command)"
-outlining 1	draw outlines on free edges
-outlining 2	draw outlines on free edges and feature lines
-pall	display all parts
-parallel	change display to parallel projection mode
-perspective	change display to perspective projection mode
-pixtol i	"change pick search tolerance to ""i"" pixels (default=100)"
-raoff	remove all reflections
-raxy	reflect model about xy-plane
-raxz	reflect model about xz plane
-razy	reflect model about yz-plane
-redraw	redraw model with current settings
-restore	restore display to original position and remove all settings
-right	display right view
-rotang d	"set rotation angle increment to ""d"" degrees"
-rstpart	restore last part that was turned off
-rx	"rotate model about global x axis (see ""rotang"" command)"
-ry	rotate model about global y axis
-rz	rotate model about global z axis
-shad	display modle in shaded mode
-shademode 0	change display to flat shading, 1 uses smooth shading
-showlegend 0	turn legend off, 1 turns it on
-showtriad 0	turn triad off, 1 turns it on
-shrink	toggle shrink mode on/off
-state +n	advance display by n states
-state -n	rewind display by n states
-"system ""command"""	"issue a unix system command (ex: system ""xterm&"")"
-t	exit LS-PrePost
-texon 0	turn textured fringing off, 1 turns it on
-textcolor R G B	"change text color (see ""background"" command)"
-timestamp 0	turn timestamp off, 1 turns it on
-"title ""xxxxxx"""	change title to xxxxxx
-title 0	turn title off, 1 turns it on
-top	display top view
-userfringefontsize i	set graphics area font size(i value ranges from 0-6, 0 restores default)
-view	display model in view mode (flat shaded mode)
-wire	display model in wire mode
-zin xmn ymn xmx ymx	zoom in where x and y values range from 0.0 to 1.0(0.0,0.0 is top left, 1.0,1.0 is bottom right)
-zout	zoom out (undo the last zin)
-+m i	add part i to display
-+m i:j	add part from PIDi to PIDj to display
--m i	remove part i from display
--m i:j	remove parts from PIDi to PIDj from display
+Command	Args	Description
+ac		Center displayed parts fit to graphics area
+anim backward		Animate backwards
+anim cycle		Cycle animation forward and backward
+anim first	n	Set starting state for animation to state n
+anim forward		Animate forward
+anim incr	n	Set animation increment by n states
+anim last	n	Set ending state for animation to state n
+anim start		Start animation
+anim stop		Stop animation
+back		Display back view
+background	R G B	Change background color (R,G,B values range from 0.0-1.0)
+background	1 1 1	Change background color to white
+background	0 0 0	Change background color to black
+beamprism	0	Draw beams as lines, 1 to draw beams as prisms
+bottom		Display bottom view
+c		Comment line marker (like using $ in a keyword input file)
+edge		Display model in edge mode
+edgelwidth	i	Change edge line width (i value ranges from 1-5)
+endfull		Restore GUI and graphics (see "full" command)
+exit		Exit LS-PrePost
+feat		Display model in feature mode
+featang	d	Change feature angle to d degrees
+front		Display front view
+full		Change graphics area to full screen (Esc to restore)
+grid		Display model in grid mode
+hide		Display model in hide mode
+home		Reset display to default (top) view
+import	keyword model.k	Import file "model.k" and add it to the current model
+labelcolor	R G B	Change label color (see "background" command)
+left		Display left view
+m	i,j,k...	Display part i,j,k where i,j,k are part IDs
+m	i:j	Display part IDs from PIDi to PIDj
+mesh		Turn mesh on
+meshcolor	R G B	Change mesh color (see "background" command)
+meshlwidth	i	Change mesh line width (i value ranges from 1-5)
+open	command cfile	Load command file named cfile
+open	d3plot d3plot	Load d3plot file named d3plot
+open	d3thdt d3thdt	Load d3thdt file named d3thdt
+open	keyword model.k	Load file model.k
+outline	R G B	Change outline color (see "background" command)
+outlining	1	Draw outlines on free edges
+outlining	2	Draw outlines on free edges and feature lines
+pall		Display all parts
+parallel	Change display to parallel projection mode
+perspective	Change display to perspective projection mode
+pixtol	i	Change pick search tolerance to i pixels (default=100)
+raoff		Remove all reflections
+raxy		Reflect model about xy-plane
+raxz		Reflect model about xz plane
+razy		Reflect model about yz-plane
+redraw		Redraw model with current settings
+restore		Restore display to original position and remove all settings
+right		Display right view
+rotang	d	Set rotation angle increment to d degrees
+rstpart		Restore last part that was turned off
+rx		Rotate model about global x axis (see "rotang" command)
+ry		Rotate model about global y axis
+rz		Rotate model about global z axis
+shad		Display model in shaded mode
+shademode	i	Change display to flat shading (0) or smooth shading (1)
+showlegend	i	Turn legend off (0) or on (1)
+showtriad	i	Turn triad off (0) or on (1)
+shrink		Toggle shrink mode on/off
+state	+n	Advance display by n states
+state	-n	Rewind display by n states
+system	"command"	Issue a unix system command (ex: system "xterm&")
+t		Exit LS-PrePost
+texon	i	Turn textured fringing off (0) or on (1)
+textcolor	R G B	Change text color (see "background" command)
+timestamp	i	Turn timestamp off (0) or on (1)
+"title"	"xxxxxx"	Change title to xxxxxx
+title	i	Turn title off (0) or on (1)
+top		Display top view
+userfringefontsize	i	Set graphics area font size (i value ranges from 0-6, 0 restores default)
+view		Display model in view mode (flat shaded mode)
+wire		Display model in wire mode
+zin	xmn ymn xmx ymx	Zoom in where x and y values range from 0.0 to 1.0 (0.0,0.0 top-left)
+zout		Zoom out (undo the last zin)
++m	i	Add part i to display
++m	i:j	Add part from PIDi to PIDj to display
+-m	i	Remove part i from display
+-m	i:j	Remove parts from PIDi to PIDj from display
