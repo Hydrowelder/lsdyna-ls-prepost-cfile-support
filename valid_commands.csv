@@ -26,7 +26,7 @@ full			Change graphics area to full screen (Esc to restore)
 grid			Display model in grid mode
 hide			Display model in hide mode
 home			Reset display to default (top) view
-import	keyword	keyword model.k	Import file "model.k" and add it to the current model
+import	keyword	keyword _main.k	Import file "_main.k" and add it to the current model
 labelcolor	RGB	R G B	Change label color (see "background" command)
 left			Display left view
 m	list	i,j,k...	Display part i,j,k where i,j,k are part IDs
@@ -37,7 +37,7 @@ meshlwidth	i	i	Change mesh line width (i value ranges from 1-5)
 open	command	command cfile	Load command file named cfile
 open	d3plot	d3plot d3plot	Load d3plot file named d3plot
 open	d3thdt	d3thdt d3thdt	Load d3thdt file named d3thdt
-open	keyword	keyword model.k	Load file model.k
+open	keyword	keyword _main.k	Load file _main.k
 outline	RGB	R G B	Change outline color (see "background" command)
 outlining	free	1	Draw outlines on free edges
 outlining	feature	2	Draw outlines on free edges and feature lines

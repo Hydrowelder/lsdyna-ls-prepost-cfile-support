@@ -46,7 +46,7 @@
     },
     "open keyword": {
         "prefix": "open keyword",
-        "body": "open keyword \"${1:model.k}\"",
+        "body": "open keyword \"${1:_main.k}\"",
         "description": "Load LS-DYNA keyword file and add it to the current model"
     },
     "open d3plot": {
