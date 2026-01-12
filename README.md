@@ -39,18 +39,6 @@ Not all commands or argument combinations may be supported yet.
 * Hover documentation is a little broken
 * No command validation
 
-## Release Notes
-### 1.1.0
-* Added hover documentation
-
-### 1.0.0
-* Added file icon
-* Added snippets
-
-### 0.0.1
-* Initial release of the extension
-* Added semantic highlighting
-
 ## Disclaimer
 This extension is not affiliated with or endorsed by Ansys.
 It is an unofficial project provided as-is.
