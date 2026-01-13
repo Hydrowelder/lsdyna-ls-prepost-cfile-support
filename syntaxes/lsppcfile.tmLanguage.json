@@ -27,7 +27,7 @@
             "patterns": [
                 {
                     "name": "comment.line.lsprepost",
-                    "match": "^\\s*[cC].*$"
+                    "match": "^\\s*[cC]\\s+.*$"
                 }
             ]
         },
