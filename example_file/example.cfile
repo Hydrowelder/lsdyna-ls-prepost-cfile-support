@@ -15,6 +15,7 @@ background 1 1 1
 c Display all parts and turn mesh on
 pall
 mesh
+nrtime 3 10 20
 
 c Change mesh appearance
 meshcolor 0.6 0.6 0.6
