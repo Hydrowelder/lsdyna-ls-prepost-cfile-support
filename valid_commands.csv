@@ -130,7 +130,7 @@ ntime	28	28	Nodal relative Y-displacement
 ntime	29	29	Nodal relative Z-displacement
 ntime	30	30	Nodal relative resultant displacement
 ntime	31	31	Nodal Head Injury Criteria, 15 milliseconds (hic15)
-ntime	32	32	Nodal Head Injury Criteria 36 milliseconds (hic36)
+ntime	32	32	Nodal Head Injury Criteria, 36 milliseconds (hic36)
 ntime	33	33	Nodal Chest Severity index (csi)
 genselect	target element	target element	Set selection mode to element
 etime	1	1	Element X-stress
@@ -236,20 +236,20 @@ mtime	18	18	Part Head Injury Criteria 36 milliseconds (hic36)
 mtime	19	19	Part Chest Severity index (csi)
 mtime	20	20	Part mass
 mtime	21	21	Part hourglass energy
-nrtime	1 n m	1 n m	Relative nodal X-distance between nodes n and m
-nrtime	2 n m	2 n m	Relative nodal Y-distance between nodes n and m
-nrtime	3 n m	3 n m	Relative nodal Z-distance between nodes n and m
-nrtime	4 n m	4 n m	Relative nodal Resultant distance between nodes n and m
-nrtime	5 n m	5 n m	Relative nodal X-displacement between nodes n and m
-nrtime	6 n m	6 n m	Relative nodal Y-displacement between nodes n and m
-nrtime	7 n m	7 n m	Relative nodal Z-disptacement between nodes n and m
-nrtime	8 n m	8 n m	Relative nodal resultant displacement between nodes n and m
-nrtime	9 n m	9 n m	Relative nodal X-velocity between nodes n and m
-nrtime	10 n m	10 n m	Relative nodal Y-velocity between nodes n and m
-nrtime	11 n m	11 n m	Relative nodal Z-velocity between nodes n and m
-nrtime	12 n m	12 n m	Relative nodal resultant velocity between nodes n and m
-nrtime	13 n m	13 n m	Relative nodal X-acceleration between nodes n and m
-nrtime	14 n m	14 n m	Relative nodal Y-acceleration between nodes n and m
-nrtime	15 n m	15 n m	Relative nodal Z-acceleration between nodes n and m
-nrtime	16 n m	16 n m	Relative nodal resultant acceleration between nodes n and m
-nrtime	17 n m	17 n m	Relative nodal temperature between nodes n and m
+nrtime	1	n m	Relative nodal X-distance between nodes n, m, etc.
+nrtime	2	n m	Relative nodal Y-distance between nodes n, m, etc.
+nrtime	3	n m	Relative nodal Z-distance between nodes n, m, etc.
+nrtime	4	n m	Relative nodal Resultant distance between nodes n, m, etc.
+nrtime	5	n m	Relative nodal X-displacement between nodes n, m, etc.
+nrtime	6	n m	Relative nodal Y-displacement between nodes n, m, etc.
+nrtime	7	n m	Relative nodal Z-disptacement between nodes n, m, etc.
+nrtime	8	n m	Relative nodal resultant displacement between nodes n, m, etc.
+nrtime	9	n m	Relative nodal X-velocity between nodes n, m, etc.
+nrtime	10	n m	Relative nodal Y-velocity between nodes n, m, etc.
+nrtime	11	n m	Relative nodal Z-velocity between nodes n, m, etc.
+nrtime	12	n m	Relative nodal resultant velocity between nodes n, m, etc.
+nrtime	13	n m	Relative nodal X-acceleration between nodes n, m, etc.
+nrtime	14	n m	Relative nodal Y-acceleration between nodes n, m, etc.
+nrtime	15	n m	Relative nodal Z-acceleration between nodes n, m, etc.
+nrtime	16	n m	Relative nodal resultant acceleration between nodes n, m, etc.
+nrtime	17	n m	Relative nodal temperature between nodes n, m, etc.

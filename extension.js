@@ -80,35 +80,34 @@ function findCommandAtPosition(commandMap, document, position) {
     const beforeTokens = beforeText.trim().split(/\s+/).filter(Boolean);
     const idx = Math.max(0, beforeTokens.length - 1);
 
-    // Try to match: start from current token, then look back 1-4 tokens for command + variant
-    const maxLen = 4; // command up to 4 tokens (e.g., "open d3plot" = 2 tokens)
+    // Try to match command + variant starting from first token (not from cursor position)
+    // This ensures we match "nrtime 2" regardless of where cursor is on the line
+    const maxLen = 4;
     for (let len = Math.min(maxLen, tokens.length); len >= 1; len--) {
-        const start = Math.max(0, idx - (len - 1));
-        if (start + len > tokens.length) continue;
+        // Try from start of line first, then work backwards
+        for (let start = 0; start + len <= tokens.length; start++) {
+            const candidateRaw = tokens.slice(start, start + len).join(" ");
+            const candidateKey = candidateRaw.replace(/\s+/g, " ").toLowerCase();
 
-        const candidateRaw = tokens.slice(start, start + len).join(" ");
-        const candidateKey = candidateRaw.replace(/\s+/g, " ").toLowerCase();
-
-        // try exact composite match first (command + variant)
-        if (byComposite.has(candidateKey)) {
-            const entry = byComposite.get(candidateKey);
-            const candidateRegex = escapeRegExp(candidateRaw).replace(/\s+/g, "\\s+");
-            const re = new RegExp("\\b" + candidateRegex + "\\b", "i");
-            const match = re.exec(lineText);
-            let range = document.getWordRangeAtPosition(position) || new vscode.Range(position, position);
-            if (match) {
-                range = new vscode.Range(position.line, match.index, position.line, match.index + match[0].length);
+            if (byComposite.has(candidateKey)) {
+                const entry = byComposite.get(candidateKey);
+                const candidateRegex = escapeRegExp(candidateRaw).replace(/\s+/g, "\\s+");
+                const re = new RegExp("\\b" + candidateRegex + "\\b", "i");
+                const match = re.exec(lineText);
+                let range = document.getWordRangeAtPosition(position) || new vscode.Range(position, position);
+                if (match) {
+                    range = new vscode.Range(position.line, match.index, position.line, match.index + match[0].length);
+                }
+                return { entry, range };
             }
-            return { entry, range };
         }
     }
 
-    // fallback: try first token as base command and return first entry
+    // fallback: try first token as base command
     if (tokens.length > 0) {
         const firstToken = tokens[0].toLowerCase();
         if (byCommand.has(firstToken)) {
             const entries = byCommand.get(firstToken);
-            // return the first entry (or the one without variant if available)
             const entry = entries.find(e => !e.variant) || entries[0];
             const re = new RegExp("\\b" + escapeRegExp(firstToken) + "\\b", "i");
             const match = re.exec(lineText);
@@ -149,26 +148,32 @@ function activate(context) {
     const { byCommand, byComposite } = commandMap;
     const seen = new Set();
 
-    // Add all composite entries (variants)
-    for (const [key, { signature, desc }] of byComposite.entries()) {
+    // Add all composite entries (variants) first
+    for (const [key, { command, signature, desc, variant }] of byComposite.entries()) {
         if (seen.has(signature)) continue;
         seen.add(signature);
         const item = new vscode.CompletionItem(signature, vscode.CompletionItemKind.Keyword);
         item.detail = signature;
         if (desc) item.documentation = new vscode.MarkdownString(desc);
         item.insertText = signature;
+        if (variant) {
+            item.sortText = `${command}_${variant.padStart(3, '0')}`;
+        }
         completionItems.push(item);
     }
 
     // Add base command entries (no variant)
     for (const [cmd, entries] of byCommand.entries()) {
-        for (const { signature, desc } of entries) {
+        for (const { signature, desc, variant } of entries) {
             if (seen.has(signature)) continue;
             seen.add(signature);
             const item = new vscode.CompletionItem(signature, vscode.CompletionItemKind.Keyword);
             item.detail = signature;
             if (desc) item.documentation = new vscode.MarkdownString(desc);
             item.insertText = signature;
+            if (variant) {
+                item.sortText = `${cmd}_${variant.padStart(3, '0')}`;
+            }
             completionItems.push(item);
         }
     }
@@ -176,11 +181,38 @@ function activate(context) {
     const completionProvider = vscode.languages.registerCompletionItemProvider(
         "lsppcfile",
         {
-            provideCompletionItems() {
+            provideCompletionItems(document, position) {
+                // Get the current line and extract what the user has typed so far
+                const line = document.lineAt(position.line).text;
+                const beforeCursor = line.slice(0, position.character).trim();
+                const tokens = beforeCursor.split(/\s+/).filter(Boolean);
+
+                // If user just typed a command word followed by space, show variants for that command
+                if (tokens.length >= 1) {
+                    const cmd = tokens[0].toLowerCase();
+                    const baseItems = completionItems.filter(item => {
+                        const itemCmd = item.label.split(/\s+/)[0].toLowerCase();
+                        return itemCmd === cmd;
+                    });
+
+                    // If we found variants for this command, show them
+                    if (baseItems.length > 0) {
+                        return baseItems;
+                    }
+                }
+
+                // Otherwise, filter by prefix (normal behavior)
+                const wordRange = document.getWordRangeAtPosition(position, /\w+/);
+                const word = wordRange ? document.getText(wordRange).toLowerCase() : "";
+
+                if (word) {
+                    return completionItems.filter(item =>
+                        item.label.toLowerCase().startsWith(word)
+                    );
+                }
                 return completionItems;
             },
         },
-        // trigger on space as well so typing "anim " will show options (optional)
         " "
     );
     context.subscriptions.push(completionProvider);

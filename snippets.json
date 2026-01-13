@@ -88,5 +88,840 @@
         "prefix": "exit",
         "body": "exit",
         "description": "Exit LS-PrePost"
+    },
+    "gtime 1": {
+        "prefix": "gtime 1",
+        "body": "gtime 1",
+        "description": "Global kinetic energy"
+    },
+    "gtime 2": {
+        "prefix": "gtime 2",
+        "body": "gtime 2",
+        "description": "Global internal energy"
+    },
+    "gtime 3": {
+        "prefix": "gtime 3",
+        "body": "gtime 3",
+        "description": "Global total energy"
+    },
+    "gtime 4": {
+        "prefix": "gtime 4",
+        "body": "gtime 4",
+        "description": "Global X-rigid body displacement"
+    },
+    "gtime 5": {
+        "prefix": "gtime 5",
+        "body": "gtime 5",
+        "description": "Global Y-rigid body displacement"
+    },
+    "gtime 6": {
+        "prefix": "gtime 6",
+        "body": "gtime 6",
+        "description": "Global Z-rigid body displacement"
+    },
+    "gtime 7": {
+        "prefix": "gtime 7",
+        "body": "gtime 7",
+        "description": "Global resultant rigid body displacement"
+    },
+    "gtime 8": {
+        "prefix": "gtime 8",
+        "body": "gtime 8",
+        "description": "Global X-rigid body velocity"
+    },
+    "gtime 9": {
+        "prefix": "gtime 9",
+        "body": "gtime 9",
+        "description": "Global Y-rigid body velocity"
+    },
+    "gtime 10": {
+        "prefix": "gtime 10",
+        "body": "gtime 10",
+        "description": "Global Z-rigid body velocity"
+    },
+    "gtime 11": {
+        "prefix": "gtime 11",
+        "body": "gtime 11",
+        "description": "Global resultant rigid body velocity"
+    },
+    "gtime 12": {
+        "prefix": "gtime 12",
+        "body": "gtime 12",
+        "description": "Global X-rigid body acceleration"
+    },
+    "gtime 13": {
+        "prefix": "gtime 13",
+        "body": "gtime 13",
+        "description": "Global Y-rigid body acceleration"
+    },
+    "gtime 14": {
+        "prefix": "gtime 14",
+        "body": "gtime 14",
+        "description": "Global Z-rigid body acceleration"
+    },
+    "gtime 15": {
+        "prefix": "gtime 15",
+        "body": "gtime 15",
+        "description": "Global resultant rigid body acceleration"
+    },
+    "ntime 1": {
+        "prefix": "ntime 1",
+        "body": "ntime 1",
+        "description": "Nodal X-coordinate"
+    },
+    "ntime 2": {
+        "prefix": "ntime 2",
+        "body": "ntime 2",
+        "description": "Nodal Y-coordinate"
+    },
+    "ntime 3": {
+        "prefix": "ntime 3",
+        "body": "ntime 3",
+        "description": "Nodal Z-coordinate"
+    },
+    "ntime 4": {
+        "prefix": "ntime 4",
+        "body": "ntime 4",
+        "description": "Nodal Total coordinate"
+    },
+    "ntime 5": {
+        "prefix": "ntime 5",
+        "body": "ntime 5",
+        "description": "Nodal X-displacement"
+    },
+    "ntime 6": {
+        "prefix": "ntime 6",
+        "body": "ntime 6",
+        "description": "Nodal Y-displacement"
+    },
+    "ntime 7": {
+        "prefix": "ntime 7",
+        "body": "ntime 7",
+        "description": "Nodal Z-displacement"
+    },
+    "ntime 8": {
+        "prefix": "ntime 8",
+        "body": "ntime 8",
+        "description": "Nodal resultant displacement"
+    },
+    "ntime 9": {
+        "prefix": "ntime 9",
+        "body": "ntime 9",
+        "description": "Nodal X-velocity"
+    },
+    "ntime 10": {
+        "prefix": "ntime 10",
+        "body": "ntime 10",
+        "description": "Nodal Y-velocity"
+    },
+    "ntime 11": {
+        "prefix": "ntime 11",
+        "body": "ntime 11",
+        "description": "Nodal Z-velocity"
+    },
+    "ntime 12": {
+        "prefix": "ntime 12",
+        "body": "ntime 12",
+        "description": "Nodal resultant velocity"
+    },
+    "ntime 13": {
+        "prefix": "ntime 13",
+        "body": "ntime 13",
+        "description": "Nodal X-acceleration"
+    },
+    "ntime 14": {
+        "prefix": "ntime 14",
+        "body": "ntime 14",
+        "description": "Nodal Y-acceleration"
+    },
+    "ntime 15": {
+        "prefix": "ntime 15",
+        "body": "ntime 15",
+        "description": "Nodal Z-acceleration"
+    },
+    "ntime 16": {
+        "prefix": "ntime 16",
+        "body": "ntime 16",
+        "description": "Nodal resultant acceleration"
+    },
+    "ntime 17": {
+        "prefix": "ntime 17",
+        "body": "ntime 17",
+        "description": "Nodal temperature"
+    },
+    "ntime 18": {
+        "prefix": "ntime 18",
+        "body": "ntime 18",
+        "description": "Nodal d(temperature)/dt"
+    },
+    "ntime 19": {
+        "prefix": "ntime 19",
+        "body": "ntime 19",
+        "description": "Nodal X-heat flux"
+    },
+    "ntime 20": {
+        "prefix": "ntime 20",
+        "body": "ntime 20",
+        "description": "Nodal Y-heat flux"
+    },
+    "ntime 21": {
+        "prefix": "ntime 21",
+        "body": "ntime 21",
+        "description": "Nodal Z-heat flux"
+    },
+    "ntime 22": {
+        "prefix": "ntime 22",
+        "body": "ntime 22",
+        "description": "Nodal resultant heat flux"
+    },
+    "ntime 23": {
+        "prefix": "ntime 23",
+        "body": "ntime 23",
+        "description": "Nodal mass scaling"
+    },
+    "ntime 24": {
+        "prefix": "ntime 24",
+        "body": "ntime 24",
+        "description": "Nodal XY-displacement"
+    },
+    "ntime 25": {
+        "prefix": "ntime 25",
+        "body": "ntime 25",
+        "description": "Nodal YZ-displacement"
+    },
+    "ntime 26": {
+        "prefix": "ntime 26",
+        "body": "ntime 26",
+        "description": "Nodal XZ-displacement"
+    },
+    "ntime 27": {
+        "prefix": "ntime 27",
+        "body": "ntime 27",
+        "description": "Nodal relative X-displacement"
+    },
+    "ntime 28": {
+        "prefix": "ntime 28",
+        "body": "ntime 28",
+        "description": "Nodal relative Y-displacement"
+    },
+    "ntime 29": {
+        "prefix": "ntime 29",
+        "body": "ntime 29",
+        "description": "Nodal relative Z-displacement"
+    },
+    "ntime 30": {
+        "prefix": "ntime 30",
+        "body": "ntime 30",
+        "description": "Nodal relative resultant displacement"
+    },
+    "ntime 31": {
+        "prefix": "ntime 31",
+        "body": "ntime 31",
+        "description": "Nodal Head Injury Criteria, 15 milliseconds (hic15)"
+    },
+    "ntime 32": {
+        "prefix": "ntime 32",
+        "body": "ntime 32",
+        "description": "Nodal Head Injury Criteria, 36 milliseconds (hic36)"
+    },
+    "ntime 33": {
+        "prefix": "ntime 33",
+        "body": "ntime 33",
+        "description": "Nodal Chest Severity index (csi)"
+    },
+    "etime 1": {
+        "prefix": "etime 1",
+        "body": "etime 1",
+        "description": "Element X-stress"
+    },
+    "etime 2": {
+        "prefix": "etime 2",
+        "body": "etime 2",
+        "description": "Element Y-stress"
+    },
+    "etime 3": {
+        "prefix": "etime 3",
+        "body": "etime 3",
+        "description": "Element Z-stress"
+    },
+    "etime 4": {
+        "prefix": "etime 4",
+        "body": "etime 4",
+        "description": "Element XY-stress"
+    },
+    "etime 5": {
+        "prefix": "etime 5",
+        "body": "etime 5",
+        "description": "Element YZ-stress"
+    },
+    "etime 6": {
+        "prefix": "etime 6",
+        "body": "etime 6",
+        "description": "Element ZX-stress"
+    },
+    "etime 7": {
+        "prefix": "etime 7",
+        "body": "etime 7",
+        "description": "Element effective plastic strain"
+    },
+    "etime 8": {
+        "prefix": "etime 8",
+        "body": "etime 8",
+        "description": "Element pressure"
+    },
+    "etime 9": {
+        "prefix": "etime 9",
+        "body": "etime 9",
+        "description": "Element effective stress von Mises (v-m)"
+    },
+    "etime 10": {
+        "prefix": "etime 10",
+        "body": "etime 10",
+        "description": "Element max principal deviatoric stress"
+    },
+    "etime 11": {
+        "prefix": "etime 11",
+        "body": "etime 11",
+        "description": "Element 2nd principal deviatoric stress"
+    },
+    "etime 12": {
+        "prefix": "etime 12",
+        "body": "etime 12",
+        "description": "Element Min principal deviatoric stress"
+    },
+    "etime 13": {
+        "prefix": "etime 13",
+        "body": "etime 13",
+        "description": "Element Tresca (max shear stress)"
+    },
+    "etime 14": {
+        "prefix": "etime 14",
+        "body": "etime 14",
+        "description": "Element maximum principal stress"
+    },
+    "etime 15": {
+        "prefix": "etime 15",
+        "body": "etime 15",
+        "description": "Element 2nd principal stress"
+    },
+    "etime 16": {
+        "prefix": "etime 16",
+        "body": "etime 16",
+        "description": "Element minimum principal stress"
+    },
+    "etime 17": {
+        "prefix": "etime 17",
+        "body": "etime 17",
+        "description": "Element X-displacement"
+    },
+    "etime 18": {
+        "prefix": "etime 18",
+        "body": "etime 18",
+        "description": "Element Y-displacement"
+    },
+    "etime 19": {
+        "prefix": "etime 19",
+        "body": "etime 19",
+        "description": "Element Z-displacement"
+    },
+    "etime 20": {
+        "prefix": "etime 20",
+        "body": "etime 20",
+        "description": "Element resultant displacement"
+    },
+    "etime 21": {
+        "prefix": "etime 21",
+        "body": "etime 21",
+        "description": "Element X-velocity"
+    },
+    "etime 22": {
+        "prefix": "etime 22",
+        "body": "etime 22",
+        "description": "Element Y-velocity"
+    },
+    "etime 23": {
+        "prefix": "etime 23",
+        "body": "etime 23",
+        "description": "Element Z-velocity"
+    },
+    "etime 24": {
+        "prefix": "etime 24",
+        "body": "etime 24",
+        "description": "Element resultant velocity"
+    },
+    "etime 25": {
+        "prefix": "etime 25",
+        "body": "etime 25",
+        "description": "Element temperature"
+    },
+    "etime 26": {
+        "prefix": "etime 26",
+        "body": "etime 26",
+        "description": "Element Mx-moment resultant"
+    },
+    "etime 27": {
+        "prefix": "etime 27",
+        "body": "etime 27",
+        "description": "Element My-moment resultant"
+    },
+    "etime 28": {
+        "prefix": "etime 28",
+        "body": "etime 28",
+        "description": "Element Mxy-moment resultant"
+    },
+    "etime 29": {
+        "prefix": "etime 29",
+        "body": "etime 29",
+        "description": "Element Qx-shear resultant"
+    },
+    "etime 30": {
+        "prefix": "etime 30",
+        "body": "etime 30",
+        "description": "Element Qy-shear resultant"
+    },
+    "etime 31": {
+        "prefix": "etime 31",
+        "body": "etime 31",
+        "description": "Element NX-normal resultant"
+    },
+    "etime 32": {
+        "prefix": "etime 32",
+        "body": "etime 32",
+        "description": "Element NY-normal resultant"
+    },
+    "etime 33": {
+        "prefix": "etime 33",
+        "body": "etime 33",
+        "description": "Element Nxy-norrnal resultant"
+    },
+    "etime 34": {
+        "prefix": "etime 34",
+        "body": "etime 34",
+        "description": "Element surface stress Nx/t-6*Mx/(t*t)"
+    },
+    "etime 35": {
+        "prefix": "etime 35",
+        "body": "etime 35",
+        "description": "Element surface stress Nx/t+6*Mx/(t*t)"
+    },
+    "etime 36": {
+        "prefix": "etime 36",
+        "body": "etime 36",
+        "description": "Element surface stress Ny/t-6*My/(t*t)"
+    },
+    "etime 37": {
+        "prefix": "etime 37",
+        "body": "etime 37",
+        "description": "Element surface stress Ny/t+6*My/(t*t)"
+    },
+    "etime 38": {
+        "prefix": "etime 38",
+        "body": "etime 38",
+        "description": "Element surface stress Nxy/t-6*Mxy/(t*t)"
+    },
+    "etime 39": {
+        "prefix": "etime 39",
+        "body": "etime 39",
+        "description": "Element surface stress Nxy/t+6*Mxy/(t*t)"
+    },
+    "etime 40": {
+        "prefix": "etime 40",
+        "body": "etime 40",
+        "description": "Element resultant upper surface effective stress"
+    },
+    "etime 41": {
+        "prefix": "etime 41",
+        "body": "etime 41",
+        "description": "Element resultant lower surface effective stress"
+    },
+    "etime 42": {
+        "prefix": "etime 42",
+        "body": "etime 42",
+        "description": "Element max effective surface stress"
+    },
+    "etime 43": {
+        "prefix": "etime 43",
+        "body": "etime 43",
+        "description": "Element lower integration point effective plastic strain or Hourglass Energy Densty"
+    },
+    "etime 44": {
+        "prefix": "etime 44",
+        "body": "etime 44",
+        "description": "Element upper integration point effective plastic strain, time step, mass or added mass"
+    },
+    "etime 45": {
+        "prefix": "etime 45",
+        "body": "etime 45",
+        "description": "Element lower integration point X-strain"
+    },
+    "etime 46": {
+        "prefix": "etime 46",
+        "body": "etime 46",
+        "description": "Element lower integration point Y-strain"
+    },
+    "etime 47": {
+        "prefix": "etime 47",
+        "body": "etime 47",
+        "description": "Element lower integration point Z-strain"
+    },
+    "etime 48": {
+        "prefix": "etime 48",
+        "body": "etime 48",
+        "description": "Element lower integration point XY-stran"
+    },
+    "etime 49": {
+        "prefix": "etime 49",
+        "body": "etime 49",
+        "description": "Element lower integration point YZ-stran"
+    },
+    "etime 50": {
+        "prefix": "etime 50",
+        "body": "etime 50",
+        "description": "Element lower integration point ZX-strain"
+    },
+    "etime 51": {
+        "prefix": "etime 51",
+        "body": "etime 51",
+        "description": "Element upper integration point X-strain"
+    },
+    "etime 52": {
+        "prefix": "etime 52",
+        "body": "etime 52",
+        "description": "Element upper integration point Y-strain"
+    },
+    "etime 53": {
+        "prefix": "etime 53",
+        "body": "etime 53",
+        "description": "Element upper integration point Z-strain"
+    },
+    "etime 54": {
+        "prefix": "etime 54",
+        "body": "etime 54",
+        "description": "Element upper integration point XY-strain"
+    },
+    "etime 55": {
+        "prefix": "etime 55",
+        "body": "etime 55",
+        "description": "Element upper integration point YZ-strain"
+    },
+    "etime 56": {
+        "prefix": "etime 56",
+        "body": "etime 56",
+        "description": "Element upper integration point ZX-strain"
+    },
+    "etime 57": {
+        "prefix": "etime 57",
+        "body": "etime 57",
+        "description": "Element mean integration point X-strain"
+    },
+    "etime 58": {
+        "prefix": "etime 58",
+        "body": "etime 58",
+        "description": "Element mean integration point Y-stran"
+    },
+    "etime 59": {
+        "prefix": "etime 59",
+        "body": "etime 59",
+        "description": "Element mean integration point Z-strain"
+    },
+    "etime 60": {
+        "prefix": "etime 60",
+        "body": "etime 60",
+        "description": "Element mean integration point XY-strain"
+    },
+    "etime 61": {
+        "prefix": "etime 61",
+        "body": "etime 61",
+        "description": "Element mean integration point YZ-strain"
+    },
+    "etime 62": {
+        "prefix": "etime 62",
+        "body": "etime 62",
+        "description": "Element mean integration point ZX-strain"
+    },
+    "etime 63": {
+        "prefix": "etime 63",
+        "body": "etime 63",
+        "description": "Element internal energy density"
+    },
+    "etime 64": {
+        "prefix": "etime 64",
+        "body": "etime 64",
+        "description": "Element XY-displacement"
+    },
+    "etime 65": {
+        "prefix": "etime 65",
+        "body": "etime 65",
+        "description": "Element YZ-displacement"
+    },
+    "etime 66": {
+        "prefix": "etime 66",
+        "body": "etime 66",
+        "description": "Element XZ-displacement"
+    },
+    "etime 67": {
+        "prefix": "etime 67",
+        "body": "etime 67",
+        "description": "Element shell thickness"
+    },
+    "etime 68": {
+        "prefix": "etime 68",
+        "body": "etime 68",
+        "description": "Element shell thinning"
+    },
+    "etime 69": {
+        "prefix": "etime 69",
+        "body": "etime 69",
+        "description": "Element lower integration point max principal strain"
+    },
+    "etime 70": {
+        "prefix": "etime 70",
+        "body": "etime 70",
+        "description": "Element lower integration point 2nd principal strain"
+    },
+    "etime 71": {
+        "prefix": "etime 71",
+        "body": "etime 71",
+        "description": "Element lower integration point min principal strain"
+    },
+    "etime 72": {
+        "prefix": "etime 72",
+        "body": "etime 72",
+        "description": "Element lower integration point effective strain"
+    },
+    "etime 73": {
+        "prefix": "etime 73",
+        "body": "etime 73",
+        "description": "Element upper integration point max principal strain"
+    },
+    "etime 74": {
+        "prefix": "etime 74",
+        "body": "etime 74",
+        "description": "Element upper integration point 2nd principal strain"
+    },
+    "etime 75": {
+        "prefix": "etime 75",
+        "body": "etime 75",
+        "description": "Element upper integration point min principal strain"
+    },
+    "etime 76": {
+        "prefix": "etime 76",
+        "body": "etime 76",
+        "description": "Element upper integration point effective strain"
+    },
+    "etime 77": {
+        "prefix": "etime 77",
+        "body": "etime 77",
+        "description": "Element mean integration point max principal strain"
+    },
+    "etime 78": {
+        "prefix": "etime 78",
+        "body": "etime 78",
+        "description": "Element mean integration point 2nd principal strain"
+    },
+    "etime 79": {
+        "prefix": "etime 79",
+        "body": "etime 79",
+        "description": "Element mean integration point min principal strain"
+    },
+    "etime 80": {
+        "prefix": "etime 80",
+        "body": "etime 80",
+        "description": "Element mean integration point effective strain"
+    },
+    "etime 530": {
+        "prefix": "etime 530",
+        "body": "etime 530",
+        "description": "Element signed von Mises strain"
+    },
+    "mtime 1": {
+        "prefix": "mtime 1",
+        "body": "mtime 1",
+        "description": "Part kinetic energy"
+    },
+    "mtime 2": {
+        "prefix": "mtime 2",
+        "body": "mtime 2",
+        "description": "Part internal energy"
+    },
+    "mtime 3": {
+        "prefix": "mtime 3",
+        "body": "mtime 3",
+        "description": "Part total energy (k+i)"
+    },
+    "mtime 4": {
+        "prefix": "mtime 4",
+        "body": "mtime 4",
+        "description": "Part X-rigid body displacement"
+    },
+    "mtime 5": {
+        "prefix": "mtime 5",
+        "body": "mtime 5",
+        "description": "Part Y-rigid body displacement"
+    },
+    "mtime 6": {
+        "prefix": "mtime 6",
+        "body": "mtime 6",
+        "description": "Part Z-rigid body displacement"
+    },
+    "mtime 7": {
+        "prefix": "mtime 7",
+        "body": "mtime 7",
+        "description": "Part resultant rigid body displacement"
+    },
+    "mtime 8": {
+        "prefix": "mtime 8",
+        "body": "mtime 8",
+        "description": "Part X-rigid body velocity"
+    },
+    "mtime 9": {
+        "prefix": "mtime 9",
+        "body": "mtime 9",
+        "description": "Part Y-rigid body velocity"
+    },
+    "mtime 10": {
+        "prefix": "mtime 10",
+        "body": "mtime 10",
+        "description": "Part Z-rigid body velocity"
+    },
+    "mtime 11": {
+        "prefix": "mtime 11",
+        "body": "mtime 11",
+        "description": "Part resultant rigid body velocity"
+    },
+    "mtime 12": {
+        "prefix": "mtime 12",
+        "body": "mtime 12",
+        "description": "Part X-rigid body acceleration"
+    },
+    "mtime 13": {
+        "prefix": "mtime 13",
+        "body": "mtime 13",
+        "description": "Part Y-rigid body acceleration"
+    },
+    "mtime 14": {
+        "prefix": "mtime 14",
+        "body": "mtime 14",
+        "description": "Part Z-rigid body acceleration"
+    },
+    "mtime 15": {
+        "prefix": "mtime 15",
+        "body": "mtime 15",
+        "description": "Part resultant rigid body acceleration"
+    },
+    "mtime 16": {
+        "prefix": "mtime 16",
+        "body": "mtime 16",
+        "description": "Part kinetic/internal energy ratio"
+    },
+    "mtime 17": {
+        "prefix": "mtime 17",
+        "body": "mtime 17",
+        "description": "Part Head Injury Criteria, 15 milliseconds (hic15)"
+    },
+    "mtime 18": {
+        "prefix": "mtime 18",
+        "body": "mtime 18",
+        "description": "Part Head Injury Criteria 36 milliseconds (hic36)"
+    },
+    "mtime 19": {
+        "prefix": "mtime 19",
+        "body": "mtime 19",
+        "description": "Part Chest Severity index (csi)"
+    },
+    "mtime 20": {
+        "prefix": "mtime 20",
+        "body": "mtime 20",
+        "description": "Part mass"
+    },
+    "mtime 21": {
+        "prefix": "mtime 21",
+        "body": "mtime 21",
+        "description": "Part hourglass energy"
+    },
+    "nrtime 1": {
+        "prefix": "nrtime 1",
+        "body": "nrtime 1 ${1:n} ${2:m}",
+        "description": "Relative nodal X-distance between nodes n, m, etc."
+    },
+    "nrtime 2": {
+        "prefix": "nrtime 2",
+        "body": "nrtime 2 ${1:n} ${2:m}",
+        "description": "Relative nodal Y-distance between nodes n, m, etc."
+    },
+    "nrtime 3": {
+        "prefix": "nrtime 3",
+        "body": "nrtime 3 ${1:n} ${2:m}",
+        "description": "Relative nodal Z-distance between nodes n, m, etc."
+    },
+    "nrtime 4": {
+        "prefix": "nrtime 4",
+        "body": "nrtime 4 ${1:n} ${2:m}",
+        "description": "Relative nodal Resultant distance between nodes n, m, etc."
+    },
+    "nrtime 5": {
+        "prefix": "nrtime 5",
+        "body": "nrtime 5 ${1:n} ${2:m}",
+        "description": "Relative nodal X-displacement between nodes n, m, etc."
+    },
+    "nrtime 6": {
+        "prefix": "nrtime 6",
+        "body": "nrtime 6 ${1:n} ${2:m}",
+        "description": "Relative nodal Y-displacement between nodes n, m, etc."
+    },
+    "nrtime 7": {
+        "prefix": "nrtime 7",
+        "body": "nrtime 7 ${1:n} ${2:m}",
+        "description": "Relative nodal Z-disptacement between nodes n, m, etc."
+    },
+    "nrtime 8": {
+        "prefix": "nrtime 8",
+        "body": "nrtime 8 ${1:n} ${2:m}",
+        "description": "Relative nodal resultant displacement between nodes n, m, etc."
+    },
+    "nrtime 9": {
+        "prefix": "nrtime 9",
+        "body": "nrtime 9 ${1:n} ${2:m}",
+        "description": "Relative nodal X-velocity between nodes n, m, etc."
+    },
+    "nrtime 10": {
+        "prefix": "nrtime 10",
+        "body": "nrtime 10 ${1:n} ${2:m}",
+        "description": "Relative nodal Y-velocity between nodes n, m, etc."
+    },
+    "nrtime 11": {
+        "prefix": "nrtime 11",
+        "body": "nrtime 11 ${1:n} ${2:m}",
+        "description": "Relative nodal Z-velocity between nodes n, m, etc."
+    },
+    "nrtime 12": {
+        "prefix": "nrtime 12",
+        "body": "nrtime 12 ${1:n} ${2:m}",
+        "description": "Relative nodal resultant velocity between nodes n, m, etc."
+    },
+    "nrtime 13": {
+        "prefix": "nrtime 13",
+        "body": "nrtime 13 ${1:n} ${2:m}",
+        "description": "Relative nodal X-acceleration between nodes n, m, etc."
+    },
+    "nrtime 14": {
+        "prefix": "nrtime 14",
+        "body": "nrtime 14 ${1:n} ${2:m}",
+        "description": "Relative nodal Y-acceleration between nodes n, m, etc."
+    },
+    "nrtime 15": {
+        "prefix": "nrtime 15",
+        "body": "nrtime 15 ${1:n} ${2:m}",
+        "description": "Relative nodal Z-acceleration between nodes n, m, etc."
+    },
+    "nrtime 16": {
+        "prefix": "nrtime 16",
+        "body": "nrtime 16 ${1:n} ${2:m}",
+        "description": "Relative nodal resultant acceleration between nodes n, m, etc."
+    },
+    "nrtime 17": {
+        "prefix": "nrtime 17",
+        "body": "nrtime 17 ${1:n} ${2:m}",
+        "description": "Relative nodal temperature between nodes n, m, etc."
     }
 }
