@@ -17,7 +17,7 @@ bottom			Display bottom view
 c			Comment line marker (like using $ in a keyword input file)
 edge			Display model in edge mode
 edgelwidth	i	i	Change edge line width (i value ranges from 1-5)
-endfull			Restore GUI and graphics (see "full" command)
+endfull			"Restore GUI and graphics (see ""full"" command)"
 exit			Exit LS-PrePost
 feat			Display model in feature mode
 featang	d	d	Change feature angle to d degrees
@@ -26,19 +26,19 @@ full			Change graphics area to full screen (Esc to restore)
 grid			Display model in grid mode
 hide			Display model in hide mode
 home			Reset display to default (top) view
-import	keyword	keyword _main.k	Import file "_main.k" and add it to the current model
-labelcolor	RGB	R G B	Change label color (see "background" command)
+import	keyword	"keyword ""_main.k"""	"Import file ""_main.k"" and add it to the current model"
+labelcolor	RGB	R G B	"Change label color (see ""background"" command)"
 left			Display left view
 m	list	i,j,k...	Display part i,j,k where i,j,k are part IDs
 m	range	i:j	Display part IDs from PIDi to PIDj
 mesh			Turn mesh on
-meshcolor	RGB	R G B	Change mesh color (see "background" command)
+meshcolor	RGB	R G B	"Change mesh color (see ""background"" command)"
 meshlwidth	i	i	Change mesh line width (i value ranges from 1-5)
 open	command	command cfile	Load command file named cfile
-open	d3plot	d3plot d3plot	Load d3plot file named d3plot
-open	d3thdt	d3thdt d3thdt	Load d3thdt file named d3thdt
-open	keyword	keyword _main.k	Load file _main.k
-outline	RGB	R G B	Change outline color (see "background" command)
+open	d3plot	"d3plot ""d3plot"""	Load d3plot file named d3plot
+open	d3thdt	"d3thdt ""d3thdt"""	Load d3thdt file named d3thdt
+open	keyword	"keyword ""_main.k"""	Load keyword file _main.k
+outline	RGB	R G B	"Change outline color (see ""background"" command)"
 outlining	free	1	Draw outlines on free edges
 outlining	feature	2	Draw outlines on free edges and feature lines
 pall			Display all parts
@@ -54,7 +54,7 @@ restore			Restore display to original position and remove all settings
 right			Display right view
 rotang	d	d	Set rotation angle increment to d degrees
 rstpart			Restore last part that was turned off
-rx			Rotate model about global x axis (see "rotang" command)
+rx			"Rotate model about global x axis (see ""rotang"" command)"
 ry			Rotate model about global y axis
 rz			Rotate model about global z axis
 shad			Display model in shaded mode
@@ -64,20 +64,39 @@ showtriad	i	i	Turn triad off (0) or on (1)
 shrink			Toggle shrink mode on/off
 state	forward	+n	Advance display by n states
 state	backward	-n	Rewind display by n states
-system	command	"command"	Issue a unix system command (ex: system "xterm&")
+system	command	command	"Issue a unix system command (ex: system ""xterm&"")"
 t			Exit LS-PrePost
 texon	i	i	Turn textured fringing off (0) or on (1)
-textcolor	RGB	R G B	Change text color (see "background" command)
+textcolor	RGB	R G B	"Change text color (see ""background"" command)"
 timestamp	i	i	Turn timestamp off (0) or on (1)
-title	set	"xxxxxx"	Change title to xxxxxx
+title	set	xxxxxx	Change title to xxxxxx
 title	toggle	i	Turn title off (0) or on (1)
 top			Display top view
 userfringefontsize	i	i	Set graphics area font size (i value ranges from 0-6, 0 restores default)
 view			Display model in view mode (flat shaded mode)
 wire			Display model in wire mode
-zin			xmn ymn xmx ymx	Zoom in where x and y values range from 0.0 to 1.0 (0.0,0.0 top-left)
+zin			xmn ymn xmx ymx Zoom in where x and y values range from 0.0 to 1.0 (0.0,0.0 top-left)
 zout			Zoom out (undo the last zin)
 +m	single	i	Add part i to display
 +m	range	i:j	Add part from PIDi to PIDj to display
 -m	single	i	Remove part i from display
 -m	range	i:j	Remove parts from PIDi to PIDj from display
+deletewin	1		Quit from a plot window
+closewin	1		Closes a plot window
+gtime	1		Global kinetic energy
+gtime	2		Global internal energy
+gtime	3		Global total energy
+gtime	4		Global X-rigid body displacement
+gtime	5		Global Y-rigid body displacement
+gtime	6		Global Z-rigid body displacement
+gtime	7		Global resultant rigid body displacement
+gtime	8		Global X-rigid body velocity
+gtime	9		Global Y-rigid body velocity
+gtime	10		Global Z-rigid body velocity
+gtime	11		Global resultant rigid body velocity
+gtime	12		Global X-rigid body acceleration
+gtime	13		Global Y-rigid body acceleration
+gtime	14		Global Z-rigid body acceleration
+gtime	15		Global resultant rigid body acceleration
+genselect	target node		Set selection mode to nodal
+genselect	target element		Set selection mode to element

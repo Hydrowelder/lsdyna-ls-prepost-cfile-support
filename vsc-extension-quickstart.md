@@ -1,6 +1,8 @@
 # Welcome to your VS Code Extension
 
 ## What's in the folder
+This site has a download to a d3plot
+https://lsdyna.ansys.com/animation1/
 
 * This folder contains all of the files necessary for your extension.
 * `package.json` - this is the manifest file in which you declare your language support and define the location of the grammar file that has been copied into your extension.

@@ -33,6 +33,7 @@ front
 rotang 15
 ry
 rx
+closewin 1
 
 c Animate forward through states
 anim first 1
