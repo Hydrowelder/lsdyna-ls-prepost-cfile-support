@@ -34,8 +34,8 @@ Install from the [VS Code Marketplace](https://marketplace.visualstudio.com/item
 or search for **LS-DYNA LS-PrePost CFile Support** in the Extensions view.
 
 ## Known Issues/Limitations
-* This extension currently focuses on core LS-PrePost commands.
-Not all commands or argument combinations may be supported yet.
+* This extension currently focuses on core LS-PrePost commands. Not all commands or argument combinations may be supported yet.
+* Many commands lack documentation
 * Hover documentation is a little broken
 * No command validation
 
