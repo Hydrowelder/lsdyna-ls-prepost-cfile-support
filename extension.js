@@ -6,12 +6,12 @@ function loadCommands(context) {
     // Read TSV shipped in the extension and build a map:
     // base command -> array of { command, variant, args, signature, desc }
     // Also store command+variant as keys for exact matches
-    const csvPath = path.join(context.extensionPath, "valid_commands.csv");
+    const csvPath = path.join(context.extensionPath, "valid_commands.tsv");
     let data = "";
     try {
         data = fs.readFileSync(csvPath, "utf8");
     } catch (e) {
-        console.error("Could not read valid_commands.csv", e);
+        console.error("Could not read valid_commands.tsv", e);
         return { byCommand: new Map(), byComposite: new Map() };
     }
     const lines = data.split(/\r?\n/).map((l) => l.trim()).filter(Boolean);
